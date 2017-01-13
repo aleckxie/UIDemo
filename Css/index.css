@@ -1,0 +1,212 @@
+body {
+    padding: 0;
+    font-size: 10pt;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mian_nav {
+    display: inline-block;
+    width: 100px;
+    padding: 5px;
+    /*background-color: #657336;*/
+    background-color: #858C48;
+    text-align: center;
+    font: bold 12px/20px arial, sans-serif;
+    margin: 0px;
+    font-size: 10.5pt;
+    float: right;
+    color: #F0DCC4;
+    /*border:1px solid #E5DDB8;*/
+    border-radius: 5px 5px 0 0;
+}
+
+.top_nav {
+    display: block;
+    /*position: absolute;*/
+    margin-top: 18px;
+    /*margin-left: 37px;*/
+}
+
+.main_top {
+    /*position: absolute;*/
+    /*padding: 5px;*/
+    padding-top: 5px;
+    border-radius: 15px 15px 0 0;
+    margin: 0 auto;
+    width: 50%;
+    height: 50px;
+    display: block;
+    background-color: #858C48;
+}
+
+.main_center {
+    /*position: absolute;*/
+    /*top: 100px;*/
+    /*padding: 5px;*/
+    margin: 0 auto;
+    width: 50%;
+    height: 975px;
+    display: block;
+    background-color: aliceblue;
+    /*position: absolute;*/
+}
+
+.center_image {
+    height: 300px;
+    background-color: black;
+}
+
+.center_image_nav {
+    height: 25px;
+    background-color: #7F8A48;
+}
+
+.center_image_nav div {
+    margin: 0 auto;
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.center_image_nav div span {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #A08558;
+    border-radius: 20px;
+    border: 1px solid #E5DDB8;
+}
+
+.center_content {
+    width: 49.6%;
+    height: 650px;
+    position: absolute;
+}
+
+.center_content .center_content_image {
+    /*float: left;*/
+    margin: 20px 10px 15px 10px;
+    border: 10px solid #000000;
+}
+
+.center_content .content_right {
+    margin: 20px 10px 15px 10px;
+    width:500px;
+    position: absolute;
+    right: 0px;
+    top:0px;
+}
+.center_content .center_list{
+    font-size: 9.5pt;
+    line-height: 35px;
+}
+
+.center_content .content_right span {
+    display: block;
+    font-size: 10.5pt;
+    line-height: 25px;
+    /*width: 500px;*/
+}
+
+.center_content .content_right .right_title2 {
+    color: #6E7A3E;
+    text-align: center;
+    font-size: 13.5pt;
+}
+.center_content .content_right .right_content{
+   color: #BEBDBD;
+    font-size: 9.5pt;
+}
+.center_content .content_right .right_title {
+    /*text-indent: 100px;*/
+    color: #C5A740;
+    font-size: 16px;
+    font-style: oblique;
+    margin-bottom: 10px;
+    /*clear: both;*/
+}
+.center_content .content_right .right_title a{
+    margin-left: 250px;
+}
+.center_nav_list_div{
+    width: 220px;
+    /*text-align: center;*/
+    margin-left: 10px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    font-size: 11.5pt;
+    position: absolute;
+    left: 0;
+    top: 300px;
+}
+.center_nav_list_div span{
+    padding-left: 10px;
+    border: 1px solid #EBEBEB;
+    display: block;
+    height: 42px;
+    color: #787878;
+    line-height: 42px;
+}
+.center_list_right{
+    position: absolute;
+    left: 250px;
+}
+.center_bottom_img{
+    display: inline-block;
+    /*position: absolute;*/
+    float: left;
+}
+.center_bottom_img span{
+    display: inline-block;
+    position: absolute;
+    left:196px;
+    bottom: 0;
+}
+.main_bottom {
+    /*position: absolute;*/
+    /*top:800px;*/
+    /*padding: 5px;*/
+    margin: 0 auto;
+    width: 50%;
+    display: block;
+    background-color: dodgerblue;
+    height: 139px;
+    color: #FFFFFF;
+    text-align: center;
+    font: 14px/20px arial, sans-serif;
+}
+
+.main_bottom span {
+    margin-right: 8px;
+}
+
+.bottom_up {
+    width: 100%;
+    height: 84px;
+    line-height: 42px;
+    display: block;
+    background-color: #838A47;
+}
+
+.bottom_down {
+    width: 100%;
+    height: 58px;
+    line-height: 58px;
+    display: block;
+    background-color: #314006;
+}
+
+.aojun {
+    width: 100px;
+    height: 50px;
+    background-color: #FFFFFF;
+    color: #E0C37F;
+    font-size: 20px;
+    position: fixed;
+    top: 100px;
+    right: 0px;
+}
