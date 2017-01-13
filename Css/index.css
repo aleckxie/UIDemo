@@ -3,7 +3,9 @@ body {
     font-size: 10pt;
     background-color: black;
 }
-
+span{
+    margin: 0px;
+}
 a {
     text-decoration: none;
 }
@@ -93,6 +95,28 @@ a {
     border: 10px solid #000000;
 }
 
+.center_content_image_nav {
+    /*float: left;*/
+    height: 22px;
+    width: 110px;
+    position: relative;
+    top: -50px;
+    left: 304px;
+
+}
+.center_content_image_nav span{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    float: left;
+    color: white;
+    text-align: center;
+    background-color: #3E2507;
+    /*border-radius: 20px;*/
+    border: 1px solid #E5DDB8;
+}
+
 .center_content .content_right {
     margin: 20px 10px 15px 10px;
     width:500px;
@@ -155,16 +179,73 @@ a {
     position: absolute;
     left: 250px;
 }
+.center_list_right span{
+    background-color: #77797A;
+    filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    width: 196px;
+    height: 25px;
+    display: block;
+    text-align: center;
+    line-height: 25px;
+    position: relative;
+    font-size:10.5pt;
+    top: -27px;
+    color:white;
+}
 .center_bottom_img{
     display: inline-block;
     /*position: absolute;*/
+    width: 196px;
+    float: left;
+    height: 162px;
+}
+ .more{
+    display: block;
+    border: 1px solid #C0C0C0;
+
+    /*position: absolute;*/
+    width: 196px;
+    height: 153px;
+     background-color: #919D5F;
+     text-align: center;
+}
+ .more span{
+     position: relative;
+     top: 60px;
+     color:white;
+     filter:alpha(opacity=80);
+     -moz-opacity:0.8;
+     -khtml-opacity: 0.8;
+     opacity: 0.8;
+ }
+.center_bottom_img_big span{
+    background-color: #77797A;
+    filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    width: 272px;
+    height: 25px;
+    display: block;
+    text-align: center;
+    line-height: 25px;
+    position: relative;
+    top: -27px;
+}
+.center_bottom_img_big{
+    display: inline-block;
+    /*position: absolute;*/
+    width: 272px;
     float: left;
 }
 .center_bottom_img span{
     display: inline-block;
-    position: absolute;
-    left:196px;
-    bottom: 0;
+    /*position: absolute;*/
+    /*left:196px;*/
+    /*bottom: 0;*/
 }
 .main_bottom {
     /*position: absolute;*/
@@ -203,10 +284,12 @@ a {
 .aojun {
     width: 100px;
     height: 50px;
+    line-height: 50px;
     background-color: #FFFFFF;
     color: #E0C37F;
     font-size: 20px;
     position: fixed;
+    text-align: center;
     top: 100px;
     right: 0px;
 }
