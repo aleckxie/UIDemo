@@ -98,10 +98,10 @@ a {
 .center_content_image_nav {
     /*float: left;*/
     height: 22px;
-    width: 110px;
+    width: 125px;
     position: relative;
     top: -50px;
-    left: 304px;
+    left: 301px;
 
 }
 .center_content_image_nav span{
@@ -116,7 +116,11 @@ a {
     /*border-radius: 20px;*/
     border: 1px solid #E5DDB8;
 }
-
+.center_content_image_nav span.clicked{
+  background-color: darkred;
+    width: 23px;
+    height: 23px;
+}
 .center_content .content_right {
     margin: 20px 10px 15px 10px;
     width:500px;
@@ -195,6 +199,7 @@ a {
     top: -27px;
     color:white;
 }
+
 .center_bottom_img{
     display: inline-block;
     /*position: absolute;*/
