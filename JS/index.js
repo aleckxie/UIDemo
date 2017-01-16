@@ -3,33 +3,156 @@
  */
 
 $(function () {
+    //内容轮询
+    var image = $(".center_content_image");
+    var $spans = $(".center_content_image_nav > span");
+    var b = new Array("Image/img1.jpg", "Image/zhuoqiu1.jpg", "Image/zhuoqiu2.jpg", "Image/zhuoqiu3.jpg", "Image/zhuoqiu4.jpg");
+    var bSize= b.length;
+    var lunxunId;
     var index=0;
-    var image=$(".center_content_image");
-    var $spans=$(".center_content_image_nav > span");
-    var b=new Array("Image/img1.jpg","Image/zhuoqiu1.jpg","Image/zhuoqiu2.jpg","Image/zhuoqiu3.jpg","Image/zhuoqiu4.jpg")
-    var lunxun=setInterval(function () {
-        var preIndex= index==0?4:index-1;
-         $(".center_content_image_nav > span:eq("+index+")").addClass("clicked");
-         $(".center_content_image_nav > span:eq("+preIndex+")").removeClass("clicked");
-        image.attr("src",b[index]);
-/*        curSpan.toggleClass("clicked");
-        $spans.get(preIndex).toggleClass("clicked");*/
-        index++;
-        if(index==5){index=0}
-    },2000);
-    $.each($spans,function (i,item) {
-        item.on("mouseup",function () {
-            clearInterval(lunxun)
+    var lunxun = function (locationStr,sizeP) {
+        var _size=sizeP;
+        lunxunId=setInterval(function () {
+            var preIndex = index == 0 ? _size-1 : index - 1;
+            $("."+locationStr+" > span:eq(" + index + ")").addClass("clicked");
+            $("."+locationStr+" > span:eq(" + preIndex + ")").removeClass("clicked");
+            image.attr("src", b[index]);
+            index++;
+            if (index == _size) {
+                index = 0
+            }
+        }, 2000);
+        return lunxunId
+    };
+    lunxunId=lunxun("center_content_image_nav",bSize);
+    $.each($spans, function (i, item) {
+        var $item = $(item);
+        $item.on("mouseenter", function () {
+            var $_this = $(this);
+            clearInterval(lunxunId);
             allSpanDC();
-            $this.addClass("clicked");
+            //改变图片的src和样式
+            var _index=parseInt($item.text())-1;
+            image.attr("src", b[_index]);
+            $_this.addClass("clicked");
         })
-        item.on("mouseout",function () {
-             lunxun();
+        $item.on("mouseleave", function () {
+            // allSpanDC();
+            var _index=parseInt($item.text());
+            if(_index==bSize){_index=0};
+            index= _index;
+            lunxun("center_content_image_nav",bSize);
         })
-    })
-    var allSpanDC=function () {
-        $.each($spans,function (i,item) {
-            item.removeClass("clicked");
+    });
+    var allSpanDC = function () {
+        $.each($spans, function (i, item) {
+            var $_item = $(item);
+            $_item.removeClass("clicked");
         });
     }
-})
+
+    var centerIndex=0;
+    //抬头图片轮询
+    var centerImage = $(".center_image");
+    var centerSpans = $(".center_image_nav > div > span");
+    var headArr = new Array("Image/img1.jpg", "Image/zhuoqiu1.jpg", "Image/zhuoqiu2.jpg", "Image/zhuoqiu3.jpg");
+    var headArrSize=headArr.length;
+    var centerlunxunId;
+    var centerlunxun = function (locationStr,sizeP) {
+        var _size=sizeP;
+        centerlunxunId=setInterval(function () {
+            var precenterIndex = centerIndex == 0 ? _size-1 : centerIndex - 1;
+            $("."+locationStr+" > div > span:eq(" + centerIndex + ")").addClass("clicked");
+            $("."+locationStr+" > div > span:eq(" + precenterIndex + ")").removeClass("clicked");
+            centerImage.attr("src", b[centerIndex]);
+            centerIndex++;
+            if (centerIndex == _size) {
+                centerIndex = 0
+            }
+        }, 2000);
+        return centerlunxunId
+    };
+    centerlunxunId=centerlunxun("center_image_nav",headArrSize);
+    $.each(centerSpans, function (i, item) {
+        var $item = $(item);
+        $item.on("mouseenter", function () {
+            var $_this = $(this);
+            clearInterval(centerlunxunId);
+            allSpanDC1();
+            //改变图片的src和样式
+            var _centerIndex=parseInt($item[0].dataset.index)-1;
+            centerImage.attr("src", b[_centerIndex]);
+            $_this.addClass("clicked");
+        })
+        $item.on("mouseleave", function () {
+            // allSpanDC();
+            var _centerIndex=parseInt($item[0].dataset.index);
+            if(_centerIndex==headArrSize){_centerIndex=0};
+            centerIndex= _centerIndex;
+            centerlunxun("center_image_nav",headArrSize);
+        })
+    });
+    var allSpanDC1 = function () {
+        $.each(centerSpans, function (i, item) {
+            var $_item = $(item);
+            $_item.removeClass("clicked");
+        });
+    }
+
+
+
+/*    setUpImageLunxun(b,image,$spans,"center_content_image_nav");
+    setUpImageLunxun(headArr,centerImage,centerSpans,"center_image_nav");*/
+});
+
+/**
+ *     var setUpImageLunxun=function (arrayP,imageP,spansP,loacationP) {
+        var index = 0;
+        var _lunxunId;
+        var _array=arrayP;
+        var _arraySize=_array.length;
+        var _image=imageP;
+        var _spans=spansP;
+        var _locationStr=loacationP;
+        var lunxun = function (locationStr,sizeP) {
+            var _size=sizeP;
+            _lunxunId=setInterval(function () {
+                var preIndex = index == 0 ? _size-1 : index - 1;
+                $("."+locationStr+" > span:eq(" + index + ")").addClass("clicked");
+                $("."+locationStr+" > span:eq(" + preIndex + ")").removeClass("clicked");
+                _image.attr("src", _array[index]);
+                index++;
+                if (index == _size) {
+                    index = 0
+                }
+            }, 2000);
+            return _lunxunId
+        };
+        var b=lunxun(_locationStr,_arraySize);
+        $.each(_spans, function (i, item) {
+            var $item = $(item);
+            $item.on("mouseenter", function () {
+                var $_this = $(this);
+                clearInterval(_lunxunId);
+                allSpanDC();
+                //改变图片的src和样式
+                var _index=parseInt($item.text())-1;
+                image.attr("src", _array[_index]);
+                $_this.addClass("clicked");
+            })
+            $item.on("mouseleave", function () {
+                // allSpanDC();
+                var _index=parseInt($item.getAttribute("index"));
+                if(_index==bSize){_index=0};
+                index= _index;
+                lunxun(_locationStr,_arraySize);
+            })
+        });
+        var allSpanDC = function () {
+            $.each(_spans, function (i, item) {
+                var $_item = $(item);
+                $_item.removeClass("clicked");
+            });
+        }
+    }
+ */

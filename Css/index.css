@@ -59,7 +59,8 @@ a {
 
 .center_image {
     height: 300px;
-    background-color: black;
+    width: 100%;
+    /*background-color: black;*/
 }
 
 .center_image_nav {
@@ -81,6 +82,9 @@ a {
     background-color: #A08558;
     border-radius: 20px;
     border: 1px solid #E5DDB8;
+}
+.center_image_nav div span.clicked {
+    background-color: red;
 }
 
 .center_content {
@@ -178,6 +182,15 @@ a {
     height: 42px;
     color: #787878;
     line-height: 42px;
+}
+.center_nav_list_content{
+    padding-left: 10px;
+    word-wrap:break-word;
+    border: 1px solid #EBEBEB;
+    display: block;
+    height: 80px;
+    /*color: #787878;*/
+    /*line-height: 42px;*/
 }
 .center_list_right{
     position: absolute;
