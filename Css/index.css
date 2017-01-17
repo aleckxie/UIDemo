@@ -44,14 +44,20 @@ a {
     display: block;
     background-color: #858C48;
 }
-
+.head_nav{
+    margin: 0 auto;
+    width: 50%;
+    height: 329px;
+    display: block;
+    background-color: aliceblue;
+}
 .main_center {
     /*position: absolute;*/
     /*top: 100px;*/
     /*padding: 5px;*/
     margin: 0 auto;
     width: 50%;
-    height: 975px;
+    height: 675px;
     display: block;
     background-color: aliceblue;
     /*position: absolute;*/
@@ -191,6 +197,9 @@ a {
     height: 80px;
     /*color: #787878;*/
     /*line-height: 42px;*/
+}
+.hide{
+    display: none;
 }
 .center_list_right{
     position: absolute;
