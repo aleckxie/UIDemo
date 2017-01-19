@@ -1,0 +1,26 @@
+{
+  "name": "uidemo",
+  "homepage": "https://github.com/aleckxie/UIDemo",
+  "authors": [
+    "aleckxie <327937132@qq.com>"
+  ],
+  "description": "\"物品显示\"",
+  "main": "",
+  "keywords": [
+    "Product",
+    "Show"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "JSLib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
