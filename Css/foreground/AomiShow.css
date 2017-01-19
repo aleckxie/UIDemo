@@ -1,0 +1,143 @@
+.aomi_title_center{
+    width: 195px;
+    height: 190px;
+    display: inline-block;
+    background-image: url("../../Image/foreground/news_bg.jpg");
+}
+.aomi_center_left_nav {
+    width: 195px;
+    height: 240px;
+    display: inline-block;
+    border: 1px solid #E2E2E2;
+    margin-left: 27px;
+    margin-top: 33px;
+    float: left;
+}
+
+.aomi_center_left_nav span {
+    display: block;
+    width: 193px;
+
+}
+
+.aomi_title_nav {
+    background-image: url("../../Image/foreground/pro_leftbg1.jpg");
+    height: 73px;
+}
+
+.aomi_nav {
+    height: 42px;
+    color: #666666;
+    font-size: 10.5pt;
+    line-height: 42px;
+    text-indent: 3px;
+}
+
+.aomi_phone_bottom {
+    height: 50px;
+    background-image: url("../../Image/foreground/pro_leftbg2.jpg");
+}
+.aomi_right_title {
+    color: #EBB973;
+    font-size: 15.5pt;
+    font-weight: bolder;
+    display: block;
+    /*margin-left: 27px;*/
+    margin-top: 27px;
+    border-bottom:  2px solid #6E500B;
+    margin-left: 250px;
+}
+
+.aomi_tubiao {
+    margin-top: 10px;
+    margin-left: 250px;
+}
+.descr{
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 12.5pt;
+    margin-left: 27px;
+}
+.type{
+    margin-top: 10px;
+    display: inline-block;
+    color: #AD8F5B;
+    font-size: 10.5pt;
+    margin-left: 27px;
+}
+.price{
+    margin-top: 10px;
+    display: inline-block;
+    color: #AD8F5B;
+    font-size: 12.5pt;
+    margin-left: 27px;
+}
+.left_point {
+    background-color: #AE8B47;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px 5px 5px 10px;
+}
+
+.center_line {
+    background-color: #AE8B47;
+    width: 650px;
+    height: 5px;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.right_point {
+    background-color: #AE8B47;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 5px 10px 10px 5px;
+
+}
+
+.aomi_right_center {
+    width: 670px;
+    height: 580px;
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+.aomi_right_center div {
+    display: inline-block;
+    width: 213px;
+    height: 170px;
+    /*border: 1px solid #6E500B;*/
+}
+
+.aomi_right_center div span {
+    width: 213px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+.aomi_right {
+    width: 213px;
+    height: 150px;
+    display: inline-block;
+    border: 1px solid #6E500B;
+    /*    margin-left: 15px;
+        margin-top: 15px;*/
+}
+.aomi_page_set{
+    margin-top: 10px;
+    display: inline-block;
+    margin-left: 260px;
+}
+.aomi_page_next{
+    display: inline-block;
+    margin-left: 150px;
+}
+.aomi_page_count{
+    display: inline-block;
+    margin-left: 30px;
+}
